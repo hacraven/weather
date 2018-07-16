@@ -17,7 +17,8 @@
 	</div>		
 </div>
 
-
+<!-- Bring in the instance variable from our controller to display on our index page. -->
+<!-- Check to make sure @location is not empty or nil and  that the API did not return an error -->
 <%  if @location != nil && @location != "" && (@error == "" || @error == nil)%>
 
 <h1>Welcome to <%= @location %>!</h1>
