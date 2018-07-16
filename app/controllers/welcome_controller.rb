@@ -14,6 +14,7 @@ class WelcomeController < ApplicationController
   end
 
   def index
+  	@states = %w(AL AK AZ AR CA CO CT DE FL GA SC NC VA WV MD PA NJ NY RI MA ME NH VT OH MI IN IL KY TN MS LA DC MO IA WI MN ND SD NE KS OK TX NM WY MT ID UT NV OR WA HI).sort!
   end
 end
 
