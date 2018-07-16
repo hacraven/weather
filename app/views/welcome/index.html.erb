@@ -16,3 +16,46 @@
 		</div>
 	</div>		
 </div>
+
+
+<%  if @location != nil && @location != "" && (@error == "" || @error == nil)%>
+
+<h1>Welcome to <%= @location %>!</h1>
+
+				<div class="row">
+
+					<div class="col-md-7">
+
+						<p><em>What's the weather like?</em></p>
+						<p>
+							Temperature is: <%= @temp_f %>°F/ <%= @temp_c %>°C
+						</p>
+						<p>
+							Feels like: <%= @real_feel_f %> °F / <%= @real_feel_c %> °C
+						</p>
+					</div>
+
+						<div class="col-md-5">
+
+							<p>
+								<%= @weather_words %> <%= image_tag @weather_icon %>
+							</p>
+
+							<p>
+								<%= link_to "Full Forecast", @forecast_link, target: "_blank" %>
+
+							</p>
+							
+
+						</div>
+					
+
+					</div>
+
+
+				</div>	
+
+<% else %>
+	<p> Error: Please enter a valid request. <%= @error %> </p>
+
+<% end %>
