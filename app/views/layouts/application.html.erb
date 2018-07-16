@@ -9,7 +9,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+    <% if @weather_words == "Cloudy" || @weather_words == "Overcast" %>
+      <body id="cloudy">
+    <% elsif @weather_words == "Clear" || @weather_words == "Sunny" %>
+      <body id="sunny">
+    <% else %>
+
   <body>
+    <% end %>
     <div class="container">
     <%= yield %>
   </div>
